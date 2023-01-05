@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+	        <meta charset="utf-8">
+	        <meta name="viewport" content="width=device-width">
+	        <title>Encriptador</title>
+	        <link rel="stylesheet" type="text/css" href="reset.css">
+	        <link rel="stylesheet" type="text/css" href="cripto.css">
+	        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	        <link rel="stylesheet" type="text/css" href="responsivo/responsivo.css">
+
+	</head>
+
+	<body>
+		<header class="cabecalho">
+			<div class="caixaLogo">
+				<img class="logo" src="Imagens/Vector.png">
+			</div>
+		</header>
+
+		<main>
+			<textarea class="area__texto" id="texto" name="texto" rows="10" cols="30" autofocus placeholder="Digite seu texto"></textarea>
+			<br>
+			<div class="botoes">
+				<button id="crip"><h3 class="criBotao">Criptografar</h2></button1></button> 
+				<button id="descrip"><h3 class="desBotao">Descriptografar</h3></button2></button>
+			</div>
+
+			<br>
+			<section class="fundoResultado">
+				<div id="semResultado" class="semResultado">
+					<h2 class="semMensagem">Nenhuma mensagem encontrada</h2>
+					<h2 class="digiteTexto">Digite um texto que você deseja criptografar ou descriptografar.</h2>
+				</div>
+			</section>
+
+			<textarea class="telaResultado" id="resultado1" name="resultado" rows="10" cols="30"></textarea>
+			
+
+
+			<br>
+			
+
+			<div class="alerta">
+				<img class="imgAlerta" src="Imagens/bi_exclamation-circle-fill.png">
+				<h2 class="textAlerta">Apenas letras minúsculas e sem acento.</h2>
+			</div>
+
+			<button hidden class="botaoCopiar" id="copy">Copiar</button>
+
+
+			<script>
+
+
+				function meuMenuToggle() {
+				  var x = document.getElementById("semResultado");
+				  if (x.style.display === "none") {
+				    x.style.display = "none";
+				  } else {
+				    x.style.display = "none";
+				  }
+				}
+
+				function copy() {
+			  		let copyText = document.getElementById("resultado1");
+			  		copyText.select();
+			  		document.execCommand("copy");
+				}
+
+				document.querySelector("#copy").addEventListener("click", copy);
+
+				
+				var input = document.querySelector("textarea");
+				var comparador = "texto";
+
+				function executar(){
+
+						let resultado = input.value.replace(/e/g,"enter");
+						resultado = resultado.replace(/i/g,"imes");
+						resultado = resultado.replace(/a/g,"ai");
+						resultado = resultado.replace(/o/g,"ober");
+						resultado = resultado.replace(/u/g,"ufat");
+
+						
+						let textArea = document.getElementById("resultado1");
+						textArea.value = resultado;
+
+						
+						input.focus();
+						meuMenuToggle();
+						document.getElementById('copy').style.display = 'inline';
+
+				}
+
+				function desfragmentar(){
+
+					let resultado = input.value.replace(/enter/g, "e");
+					resultado = resultado.replace(/imes/g, "i");
+					resultado = resultado.replace(/ai/g, "a");
+					resultado = resultado.replace(/ober/g, "o");
+					resultado = resultado.replace(/ufat/g, "u");
+
+					let textArea = document.getElementById("resultado1");
+						textArea.value = resultado;
+
+						
+						input.focus();
+
+				}
+
+
+				
+				var botao = document.getElementById("crip");
+				botao.onclick = executar;
+
+
+
+
+				var botaoDescriptar = document.getElementById("descrip");
+				botaoDescriptar.onclick = desfragmentar;
+
+			</script>
+		</main>
+	</body>
+</html>

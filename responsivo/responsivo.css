@@ -1,0 +1,181 @@
+@media screen and (min-width: 0px) {
+
+	.cabecalho {
+		height: 96px;
+	}
+
+	.caixaLogo {
+		height: auto;
+		width: auto;
+		left: 12%;
+	}
+
+	.logo {
+		width: 2rem;
+		height: 3rem;
+	}
+
+	#texto {
+		position: initial;
+		margin-top: 3.5rem;
+		margin-left: 12%;
+		width: 85%;
+		height: calc(445px - 119px);
+	}
+
+	.fundoResultado {
+		position: initial;
+		margin: 4rem auto 0;
+		width: 95%;
+		height: 595px;
+		text-align: center;
+	}
+
+	.semResultado {
+		padding-top: 2rem;
+		width: 100%;
+		position: initial;
+		height: auto;
+
+	}
+
+	.semMensagem {
+		font-size: 1.5rem;
+		position: initial;
+		width: 100%;
+		
+	}
+
+	.digiteTexto {
+		position: initial;
+		top: 25px;
+		width: 100%;
+	}
+
+	.alerta {
+		left: 1rem;
+		top: 451px;
+	}
+	.botoes {
+		position: initial;
+		flex-direction: column;
+		width: 100%;
+		left: 1rem;
+		align-items: center;
+		height: auto;
+	}
+
+	.telaResultado {
+		position: absolute;
+		width: 75%;
+		left: 2.5rem;
+		top: 730px;
+	}
+
+
+
+	.botaoCopiar {
+		position: absolute;
+		left: 48px;
+		top: 1230px;
+		width: 82%;
+	}
+
+	
+}
+
+@media screen and (min-width: 768px) {
+
+	.botoes {
+		position: initial;
+		flex-direction: row;
+		width: auto;
+		justify-content: space-around;
+		height: auto;
+		margin: 1rem;
+	}
+
+	.telaResultado {
+    	position: absolute;
+    	width: 90%;
+    	left: 2.5rem;
+    	top: 685px;
+	}
+
+	.botaoCopiar {
+	   position: absolute;
+	   left: 10%;
+	   top: 1170px;
+	   width: 80%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.caixaLogo {
+		width: 120px;
+	    height: 48px;
+	    left: 40px;
+	}
+
+	#texto {
+		margin-left: 16%;
+		width: 45%;
+		height: 415px;
+	}
+
+	.botoes {
+		width: 58%;
+		margin-left: 5%;
+	}
+
+	.fundoResultado {
+		position: absolute;
+	    height: 85%;
+	    left: 70%;
+	    top: 0;
+	    width: 28%;
+
+	}
+
+	.telaResultado {
+		position: absolute;
+	    width: 25%;
+	    height: 470px;
+	    left: 71%;
+    	top: 90px;
+	}
+
+	.alerta {
+		top: 78%;
+	}
+
+	.botaoCopiar {
+		position: absolute;
+	    width: 24%;
+	    left: 72%;
+	    top: 590px;
+	}
+
+	.semResultado {
+		background-image: url(../Imagens/Busca.png);
+		background-size: 80% 50%;
+		background-position: 50% 20%;
+		background-repeat: no-repeat;
+
+		padding-top: 2rem;
+
+		height: 85%;
+		
+	}
+
+	.semMensagem {
+		width: 75%;
+		margin-left: 15%;
+		padding-top: 100%;
+	}
+
+	.digiteTexto {
+		width: 73%;
+		margin-left: 15%;
+	}
+}
